@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+.container-dashboard{
+  width: 80%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+
+}
+.wrapper{
+  position: relative;
+}
+.errors-location{
+  position: absolute;
+  top: 40px;
+  right: -610px;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+
+
+/* toast bar */
+.toast-wrapper{
+  width: 380px;
+  margin: 20px 10px;
+}
+.r-toast{
+  /* height: 60px; */
+  padding: 5px 0px;
+  border-radius: 7px;
+  display: grid;
+  grid-template-columns: 1.3fr 6fr 0.5fr;
+  box-shadow: 0 10px 5px rgba(0,0,0,0.08);
+  background-color: #f4f8fb;
+}
+.success{
+  border-left: 3px solid #47D764;
+}
+.error{
+  border-left: 3px solid #ff355b;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.success i{ 
+  color: #47D764;
+}
+.error i{
+  color: #ff355b;
+}
+
+.toast:not(:last-child){
+  margin-bottom: 10px;
+}
+.outer-container,.inner-container{
+  align-self: center;
+} 
+.outer-container i{
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.inner-container p:first-child{
+  color:#03a9f4;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 3px;
+}
+.inner-container p:last-child{
+  font-size: 13px;
+  font-weight: 400;
+  color: #656565;
+  margin: 2px;
+}
+.r-toast button{
+  align-self:center;
+  background-color: transparent;
+  font-size: 25px;
+  color: #656565;
+  line-height: 0;
+  cursor: pointer;
+  border: none;
 }
